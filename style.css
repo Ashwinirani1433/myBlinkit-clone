@@ -12,38 +12,53 @@ header .container{
     position: fixed;
     top: 0%;
     width: 100%;
-    height:67px;
+    height:86px;
     z-index: 1000;
     border-bottom: 1px solid rgb(238,238,238);
     background-color: var(--color-white);
 }
+.logo {
+    width: 178px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo svg{
-    width: 80px;
-    height: 20px;;
+    width: 134px;
+    height: 30px;;
+}
+.location{
+    width:320px;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .logo, .location, .search-bar, .login, .cart{
     padding: 0px 25px;
 }
 .location .location-title{
-    font-size: 13px;
+    font-size: 18px;
     font-weight: var(--fw-800);
-    margin-bottom: 3px;;
+    margin-bottom: 8px;;
 }
 .location-desc{
-   font-size: 11px;
+   font-size: 12px;
 }
 .location-desc .fa-sort-down{
     transform: translateY(-2px);
     padding-left: 5px;
 }
 .search-bar{
-    width: 52%;
+    width: 100%;
     background-color:var(--color-grey-2);
     color: var(--color-grey);
-    border-radius: 5px;
+    border-radius: 12px;
     border: 1px solid rgb(0, 0, 0, 0.04);
     display: flex;
-    height:40px;
+    height:48px;
     gap: 10px;
     align-items: center;
     padding-left: 12px;
@@ -64,9 +79,16 @@ header .container{
     width: 100%;
 }
 .login{
-    font-size: 11px;
-    color: var(--color-grey);
+    width:162px;
+    font-size: 18px;
+    color:rgb(54, 54, 54);
+    font-weight: var(--fw-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
 }
+
 .cart button{ 
     background-color: var(--color-green);
     color: var(--color-white);
@@ -77,6 +99,26 @@ header .container{
     font-size: 11px;
     font-weight: var(--fw-700);
 }
+.fa-cart-shopping:hover {
+    animation: 0.6s ease 0s 2 normal none running animation;
+}
+@keyframes animation{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.profile{
+    display: none;
+}
 .wrapper{
     display: flex;
     align-items: center;
@@ -86,10 +128,10 @@ header .container{
 
 }
 .main-container{
-    width: 1100px;
+    width: 1280px;
 }
 .banner img{
-    width: 100%;
+    width: 102.5%;
 }
 .banner-2{
     display: flex;
@@ -190,4 +232,114 @@ footer{
 }
 .fa-heart{
     color: red;
+}
+@media screen and (min-width:320px) and (max-width:1020px){
+    body{
+        width: 100%;
+    }
+    .logo,.login,.cart{
+        display: none;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width:100% !important;
+        height: 112px !important;
+        padding-bottom: 124px;
+    }
+    .wrapper{
+         min-height: 100vh;
+         margin-top: 4%;
+    }
+    .main-container{
+        width: 100% !important;
+    }
+    .banner img{
+        display: none;
+    }
+    .banner img{
+        width:100%;
+    }
+    .banner-img img{
+        width: 100%;
+    }
+    .banner-2 img{
+        width: 100%;
+        overflow: auto;
+        height: 100% !important;
+    }
+    .item{
+        min-width: 45% !important;
+        
+    }
+    .list-items{
+        width: 98%;
+        padding-left: 0px;
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
+    .item img{
+        width: 98%;
+        height: 98%;
+    }
+    .location p{
+        text-align: start;
+    }
+    .search-input{
+        height: 48px;
+        display: flex;
+    }
+    .searchbar{
+        width: 91%;
+        margin-left: 10px;
+    }
+    .location{
+        margin-left: 16px;
+        margin-top: 10px;
+    }
+    .container{
+        align-items: start !important;
+        gap: 10px;
+    }
+    .wrapper{
+        top:0px;
+        justify-content: start;
+    }
+    header{
+        height: 112px;
+    }
+    .banner{
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    
+    }
+    .categories{
+        width: 100%;
+        left: 0px;
+    }
+    .banner-2{
+        margin-left: 7px;
+    }
+    .category-name{
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .title a{
+        margin-right: 10px;
+        font-size: 17px;
+    }
+    .categories{
+        grid-template-columns: repeat(4,25%);
+    }
+    footer{
+        position: static;
+    }
+    .profile{
+    display: inline;
+     position: absolute;
+    right: 0px;
+    margin-top: 16px;
+    margin-right: 16px;
+    }
 }
