@@ -6,6 +6,15 @@
     box-sizing: border-box;
     font-family: var(--font-family);
 }
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header{
+    border:none;
+    outline:none;
+}
 header .container{
     display: flex;
     align-items: center;
